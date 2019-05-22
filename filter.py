@@ -30,8 +30,8 @@ for i in range(len(data)):
     a = 0
     b = 0
     for j in range(M):
-        a += int(data[i][0])
-        b += int(data[i][1])
+        a += int(data[i+j][0])
+        b += int(data[i+j][1])
     arr = np.append(arr, np.array([[int(a/M), int(b/M)]]), axis=0)
 
 wavio.write('timpani-sample.wav', arr, rate, sampwidth=width)
